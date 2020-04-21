@@ -5,8 +5,8 @@ setup:
 
 install:
 	# This should be run from inside a virtualenv
-	pip install --upgrade pip &&\
-		pip install -r requirements.txt
+	pip3 install --upgrade pip &&\
+		pip3 install -r requirements.txt
 
 test:
 	# Additional, optional, tests could go here
@@ -19,7 +19,7 @@ validate-circleci:
 
 run-circleci-local:
 	# See https://circleci.com/docs/2.0/local-cli/#running-a-job
-	circleci local execute
+	circleci local executecd
 
 lint:
 	# See local hadolint install instructions:   https://github.com/hadolint/hadolint

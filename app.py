@@ -1,10 +1,9 @@
-#!/usr/bin/env python
+from flask import Flask
+app = Flask(__name__)
 
-import click
+@app.route('/')
+def hello_world():
+    return 'Hello, World!'
 
-@click.command()
-def hello():
-    click.echo('Hello Room')
-    
-if __name__ == '__main__':
-    hello()
+if __name__ == "__main__":
+    app.run(host='0.0.0.0', port=8080, debug=True)
