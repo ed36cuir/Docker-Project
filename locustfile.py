@@ -1,4 +1,4 @@
-from locust import HttpLocust, TaskSet, betweem
+from locust import HttpLocust, TaskSet, between
 
 def index(l):
     l.client.get("/")
@@ -8,4 +8,4 @@ class UserBehavior(TaskSet):
     
 class WebsiteUser(HttpLocust):
     task_set = UserBehavior
-    wait_time = betweem(5.0, 9.0)
+    wait_time = between(5.0, 9.0)
